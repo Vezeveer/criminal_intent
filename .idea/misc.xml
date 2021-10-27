@@ -6,10 +6,13 @@
         <entry key="..\:/Users/Vezeveer/AndroidStudioProjects/CriminalIntent2/app/src/main/res/layout/activity_crime.xml" value="0.1" />
         <entry key="..\:/Users/Vezeveer/AndroidStudioProjects/CriminalIntent2/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Vezeveer/AndroidStudioProjects/CriminalIntent2/app/src/main/res/layout/fragment_crime.xml" value="0.17696629213483145" />
+        <entry key="..\:/Users/Vezeveer/AndroidStudioProjects/criminal_intent/app/src/main/res/layout/activity_fragment.xml" value="0.1638888888888889" />
+        <entry key="..\:/Users/Vezeveer/AndroidStudioProjects/criminal_intent/app/src/main/res/layout/activity_main.xml" value="0.1638888888888889" />
+        <entry key="..\:/Users/Vezeveer/AndroidStudioProjects/criminal_intent/app/src/main/res/layout/fragment_crime.xml" value="0.22" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
