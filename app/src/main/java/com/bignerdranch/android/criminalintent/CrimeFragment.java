@@ -18,14 +18,22 @@ import java.util.UUID;
 public class CrimeFragment extends Fragment {
     private Crime mCrime;
     private EditText mTitleField;
+    private static final String ARG_CRIME_ID = "crime_id";
+
+    public static CrimeFragment newInstance(UUID crimeId){
+        Bundle args = new Bundle();
+        args.putSerializable(ARG_CRIME_ID, crimeId);
+        CrimeFragment fragment = new CrimeFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     public CrimeFragment(){}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        UUID crimeId = (UUID) getActivity().getIntent()
-                .getSerializableExtra(MainActivity.EXTRA_CRIME_ID);
+        UUID crimeId = (UUID) getArguments().getSerializable(ARG_CRIME_ID);
         mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
     }
 
@@ -38,8 +46,10 @@ public class CrimeFragment extends Fragment {
                 container, false);
 
         mTitleField = v.findViewById(R.id.edit_text_title);
+        mTitleField.setText(mCrime.getmTitle());
         Button mDateButton = v.findViewById(R.id.edit_text_date);
         CheckBox mCheckBox = v.findViewById(R.id.checkbox_solved);
+        mCheckBox.setChecked(mCrime.ismSolved());
 
         mDateButton.setText(String.format(Locale.ENGLISH,
                 "%1$tY %1$tb %1$td",
