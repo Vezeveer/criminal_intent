@@ -2,4 +2,6 @@
     <string name="app_name">Criminal Intent</string>
     <string name="title_name">TITLE</string>
     <string name="details_name">DETAILS</string>
+    <string name="crime_solved_label">Solved</string>
+    <string name="date_picker_title">Date of Crime:</string>
 </resources>
