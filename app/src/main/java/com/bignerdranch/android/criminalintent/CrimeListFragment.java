@@ -77,6 +77,20 @@ public class CrimeListFragment extends Fragment {
                 getActivity().invalidateOptionsMenu();
                 updateSubtitle();
                 return true;
+            case R.id.update_crime_list:
+                getActivity().recreate();
+                Toast.makeText(getActivity(),
+                        "Updated!",
+                        Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.about_app:
+                Intent intentAbout = new Intent(getActivity(), AboutActivity.class);
+                startActivity(intentAbout);
+                return true;
+            case R.id.exit_app:
+                getActivity().finish();
+                System.exit(0);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

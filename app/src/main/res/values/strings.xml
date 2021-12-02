@@ -8,4 +8,10 @@
     <string name="show_subtitle">Show Subtitle</string>
     <string name="hide_subtitle">Hide Subtitle</string>
     <string name="subtitle_format">%1$d crimes</string>
+    <string name="update_crime_list">Update</string>
+    <string name="exit_button">Exit</string>
+    <string name="about_button">About</string>
+    <string name="about_text_info">
+        Purpose of this app: To add/update a list of crimes and keep track of them. Making sure no crime is unsolved one crime at a time. Please use this to solve your cases.
+    </string>
 </resources>

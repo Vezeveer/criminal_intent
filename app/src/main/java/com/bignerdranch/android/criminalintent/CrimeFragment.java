@@ -27,6 +27,7 @@ public class CrimeFragment extends Fragment {
 
     private static final int REQUEST_DATE = 0;
     Button mDateButton;
+    Button mAddButton;
 
     public static CrimeFragment newInstance(UUID crimeId){
         Bundle args = new Bundle();
@@ -56,6 +57,7 @@ public class CrimeFragment extends Fragment {
         mTitleField = v.findViewById(R.id.edit_text_title);
         mTitleField.setText(mCrime.getmTitle());
         mDateButton = v.findViewById(R.id.edit_text_date);
+        mAddButton = v.findViewById(R.id.btn_add_crime);
         CheckBox mCheckBox = v.findViewById(R.id.checkbox_solved);
         mCheckBox.setChecked(mCrime.ismSolved());
 
@@ -78,6 +80,19 @@ public class CrimeFragment extends Fragment {
                 dialog.setTargetFragment(CrimeFragment.this, REQUEST_DATE);
 
                 dialog.show(manager, DIALOG_DATE);
+            }
+        });
+
+        mAddButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mCrime.setmTitle(mTitleField.getText().toString());
+                mCrime.setmSolved(mCheckBox.isChecked());
+
+                Toast.makeText(getActivity(),
+                        mTitleField.getText() + " - Added",
+                        Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -112,6 +127,8 @@ public class CrimeFragment extends Fragment {
             updateDate();
         }
     }
+
+
 
     private void updateDate() {
         mDateButton.setText(mCrime.getmDate().toString());

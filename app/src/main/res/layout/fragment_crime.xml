@@ -32,6 +32,12 @@
         android:layout_height="wrap_content"
         android:text="Solved"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_add_crime"
+        android:text="Add/Update"/>
+
 
 
 </LinearLayout>
